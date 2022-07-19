@@ -11,12 +11,12 @@ nav {
 
 }
 
-nav span{
+nav span { 
   font-family: "Bungee", cursive;
 
 }
 
-#logo{
+#logo {
   font-size: 32px;
 }
 
@@ -27,7 +27,7 @@ nav span{
   font-size: 24px;
 }
 
-#newtweettext{
+#newtweettext {
   font-family: "Source Sans Pro", sans-serif;
 
 }

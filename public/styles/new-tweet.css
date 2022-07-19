@@ -1,29 +1,33 @@
-.new-tweet{
+.tweet-form {
   display:flex;
   flex-direction: column;
+  font-weight: 600;
 }
 
-.testclass{
-  display:flex;
-  flex-direction: column;
+.tweet-form label {
+  align-self: start;
 }
 
-.submit-tweet{
+.submit-tweet {
   display: flex;
   justify-content: space-between;
   font-family: "Bungee", cursive;
 }
 
-#tweet-text{
-  font-size: 18px;
+#tweet-text {
+  font-size: 22px;
   outline: 0;
   background-color: transparent;
   border-width: 0 0 4px;
   border-color: gray;
-  margin-bottom: 12px
+  margin-bottom: 12px;
+  padding-top: 8px;
+  height: 50px;
 }
 
-#tweet-button{
+#tweet-button {
   background-color: #4056A1;
   color: white;
+  font-size: 18px;
+  padding: 4px 8px 4px 8px;
 }
