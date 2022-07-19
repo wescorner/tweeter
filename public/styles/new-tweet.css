@@ -1,0 +1,29 @@
+.new-tweet{
+  display:flex;
+  flex-direction: column;
+}
+
+.testclass{
+  display:flex;
+  flex-direction: column;
+}
+
+.submit-tweet{
+  display: flex;
+  justify-content: space-between;
+  font-family: "Bungee", cursive;
+}
+
+#tweet-text{
+  font-size: 18px;
+  outline: 0;
+  background-color: transparent;
+  border-width: 0 0 4px;
+  border-color: gray;
+  margin-bottom: 12px
+}
+
+#tweet-button{
+  background-color: #4056A1;
+  color: white;
+}
