@@ -16,7 +16,7 @@ $(function () {
         </div>
         <div class="tag">${tweetData.user.handle}</div>
       </header>
-      <p>${tweetData.content.text}</p>
+      <p>${escape(tweetData.content.text)}</p>
       <footer>
         <p>${timeago.format(tweetData.created_at)}</p>
         <div class="icons">
@@ -28,6 +28,12 @@ $(function () {
     </article>
   `);
     return tweet;
+  };
+
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
   };
 
   const renderTweets = function (tweetsArray) {
