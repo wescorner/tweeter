@@ -33,8 +33,7 @@ $(function () {
   const renderTweets = function (tweetsArray) {
     //take in an array of tweet objects and append each one to tweets-container
     tweetsArray.forEach((element) => {
-      const $tweet = createTweetElement(element);
-      $("#tweets-container").append(createTweetElement(element));
+      $("#tweets-container").prepend(createTweetElement(element));
     });
   };
 
@@ -47,6 +46,9 @@ $(function () {
     }
     $.post("http://localhost:8080/tweets/", $serializedData, function (data) {
       console.log($serializedData);
+    }).done(function () {
+      $("#tweet-text").val("");
+      loadTweets();
     });
   });
 
