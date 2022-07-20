@@ -44,11 +44,10 @@ $(function () {
     if ($inputLength < 1 || $inputLength > 140) {
       return alert("Tweets must be between 1-140 characters!");
     }
-    $.post("http://localhost:8080/tweets/", $serializedData, function (data) {
-      console.log($serializedData);
-    }).done(function () {
+    $.post("http://localhost:8080/tweets/", $serializedData).done(function () {
       $("#tweet-text").val("");
-      loadTweets();
+      loadNewTweet();
+      // $("#tweets-container").load(location.href + " #tweets-container");
     });
   });
 
@@ -56,6 +55,12 @@ $(function () {
     //make request to /tweets and receive array of tweets as JSON
     $.get("http://localhost:8080/tweets/").done(function (data) {
       renderTweets(data);
+    });
+  };
+
+  const loadNewTweet = function () {
+    $.get("http://localhost:8080/tweets/").done(function (data) {
+      $("#tweets-container").prepend(createTweetElement(data[data.length - 1]));
     });
   };
   loadTweets();
