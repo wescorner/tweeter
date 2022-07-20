@@ -1,24 +1,21 @@
-#tweet-container {
+.tweet {
   margin-top: 48px;
   margin-bottom: 48px;
   display: flex;
+  flex-direction: column;
   border-style: solid;
   border-radius: 10px;
   border-color: gray;
-}
-
-#tweet-container:hover {
-  box-shadow: 5px 5px #9fb1ec;
-}
-
-.tweet {
   width: 100%;
   text-align: start;
   padding: 18px;
 }
 
+.tweet:hover {
+  box-shadow: 4px 4px #9fb1ec;
+}
+
 .tweet header {
-  /* padding: 24px; */
   display: flex;
   justify-content: space-between;
   width: 100%;
