@@ -1,3 +1,7 @@
+.new-tweet {
+  display: none;
+}
+
 .tweet-form {
   display:flex;
   flex-direction: column;
@@ -44,6 +48,7 @@
 }
 
 #error {
+  display: none !important;
   color: red;
   display: flex;
   justify-content: space-evenly;

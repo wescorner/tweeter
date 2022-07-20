@@ -2,7 +2,7 @@ nav {
   display: flex;
   height: 120px;
   width: 100%;
-  background-color: transparent;
+  background-color: #4056A1;
   color:#FFFFFF;
   padding: 1.5em;
   justify-content: space-between;
@@ -22,14 +22,36 @@ nav span {
   font-size: 32px;
 }
 
-#newtweet {
+#new-tweet-button {
+  background: none;
+  border: none;
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 24px;
 }
 
-#newtweettext {
-  font-family: "Source Sans Pro", sans-serif;
+#new-tweet-button:hover {
+  transform: scale(1.1)
+}
 
+#new-tweet-button:hover i{
+  animation: bounce 1.5s infinite;
+
+}
+
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0)
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+#new-tweet-text {
+  font-family: "Source Sans Pro", sans-serif;
 }

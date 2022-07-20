@@ -1,9 +1,3 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 $(function () {
   const createTweetElement = function (tweetData) {
     //return <article> html element that contains the entire HTML structure of tweet
@@ -43,20 +37,6 @@ $(function () {
     });
   };
 
-  $(".tweet-form").submit(function (event) {
-    event.preventDefault();
-    const $serializedData = $(this).serialize();
-    const $inputLength = $("#tweet-text").val().length;
-    if ($inputLength < 1 || $inputLength > 140) {
-      return $("#error").slideDown();
-    }
-    $.post("http://localhost:8080/tweets/", $serializedData).done(function () {
-      $("#tweet-text").val("");
-      $(".counter").text("140");
-      loadNewTweet();
-    });
-  });
-
   const loadTweets = function () {
     //make request to /tweets and receive array of tweets as JSON
     $.get("http://localhost:8080/tweets/").done(function (data) {
@@ -70,6 +50,35 @@ $(function () {
       $("#tweets-container").prepend(createTweetElement(data[data.length - 1]));
     });
   };
+
+  $(".tweet-form").submit(function (event) {
+    //submit Ajax POST of form
+    event.preventDefault();
+    const $serializedData = $(this).serialize();
+    const $inputLength = $("#tweet-text").val().length;
+    if ($inputLength < 1 || $inputLength > 140) {
+      return $("#error").slideDown();
+    }
+    $.post("http://localhost:8080/tweets/", $serializedData).done(function () {
+      $("#tweet-text").val("");
+      $(".counter").text("140");
+      loadNewTweet();
+    });
+  });
+
+  $("#new-tweet-button").click(function () {
+    //slide toggle of compose tweet section on button press
+    $(".new-tweet").slideToggle();
+    $("#tweet-text").focus();
+  });
+
+  $("#tweet-text").keypress(function (key) {
+    //allowing user to submit tweet via Enter key
+    if (key.which === 13 && !key.shiftKey) {
+      key.preventDefault();
+      $(".tweet-form").submit();
+    }
+  });
 
   loadTweets();
 });
