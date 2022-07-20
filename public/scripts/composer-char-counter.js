@@ -2,12 +2,13 @@ $(function () {
   $("#tweet-text").on("input", function () {
     const input = $(this).val().length;
     const counter = 140 - input;
-    const charsRemaining = $(this).parent().find(".submit-tweet").find(".counter");
-    charsRemaining.text(counter);
+    const $charsRemaining = $(this).parent().find(".submit-tweet").find(".counter");
+    $charsRemaining.text(counter);
     if (counter < 0) {
-      charsRemaining.css("color", "red");
+      $charsRemaining.css("color", "red");
     } else {
-      charsRemaining.css("color", "#545149");
+      $("#error").slideUp();
+      $charsRemaining.css("color", "#545149");
     }
   });
 });

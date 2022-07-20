@@ -48,12 +48,12 @@ $(function () {
     const $serializedData = $(this).serialize();
     const $inputLength = $("#tweet-text").val().length;
     if ($inputLength < 1 || $inputLength > 140) {
-      return alert("Tweets must be between 1-140 characters!");
+      return $("#error").slideDown();
     }
     $.post("http://localhost:8080/tweets/", $serializedData).done(function () {
       $("#tweet-text").val("");
+      $(".counter").text("140");
       loadNewTweet();
-      // $("#tweets-container").load(location.href + " #tweets-container");
     });
   });
 
@@ -65,9 +65,11 @@ $(function () {
   };
 
   const loadNewTweet = function () {
+    //same as loadTweets() but for only the most recent tweet
     $.get("http://localhost:8080/tweets/").done(function (data) {
       $("#tweets-container").prepend(createTweetElement(data[data.length - 1]));
     });
   };
+
   loadTweets();
 });
