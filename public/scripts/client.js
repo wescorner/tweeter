@@ -5,17 +5,30 @@
  */
 
 $(function () {
-  const tweetData = {
-    user: {
-      name: "Newton",
-      avatars: "https://i.imgur.com/73hZDYK.png",
-      handle: "@SirIsaac",
+  const data = [
+    {
+      user: {
+        name: "Newton",
+        avatars: "https://i.imgur.com/73hZDYK.png",
+        handle: "@SirIsaac",
+      },
+      content: {
+        text: "If I have seen further it is by standing on the shoulders of giants",
+      },
+      created_at: 1461116232227,
     },
-    content: {
-      text: "If I have seen further it is by standing on the shoulders of giants",
+    {
+      user: {
+        name: "Descartes",
+        avatars: "https://i.imgur.com/nlhLi3I.png",
+        handle: "@rd",
+      },
+      content: {
+        text: "Je pense , donc je suis",
+      },
+      created_at: 1461113959088,
     },
-    created_at: 1461116232227,
-  };
+  ];
 
   const createTweetElement = function (tweetData) {
     //return <article> html element that contains the entire HTML structure of tweet
@@ -42,9 +55,12 @@ $(function () {
     return tweet;
   };
 
-  const $tweet = createTweetElement(tweetData);
-  const $tweet2 = createTweetElement(tweetData);
-  console.log($tweet);
-  $("#tweets-container").append($tweet);
-  $("#tweets-container").append($tweet2);
+  const renderTweets = function (tweetsArray) {
+    //take in an array of tweet objects and append each one to tweets-container
+    tweetsArray.forEach((element) => {
+      const $tweet = createTweetElement(element);
+      $("#tweets-container").append(createTweetElement(element));
+    });
+  };
+  renderTweets(data);
 });
