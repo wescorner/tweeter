@@ -63,4 +63,12 @@ $(function () {
     });
   };
   renderTweets(data);
+
+  $(".tweet-form").submit(function (event) {
+    event.preventDefault();
+    const $serializedData = $(this).serialize();
+    $.post("http://localhost:8080/tweets/", $serializedData, function (data) {
+      console.log($serializedData);
+    });
+  });
 });
