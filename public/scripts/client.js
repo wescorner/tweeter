@@ -62,7 +62,6 @@ $(function () {
       $("#tweets-container").append(createTweetElement(element));
     });
   };
-  renderTweets(data);
 
   $(".tweet-form").submit(function (event) {
     event.preventDefault();
@@ -71,4 +70,12 @@ $(function () {
       console.log($serializedData);
     });
   });
+
+  const loadTweets = function () {
+    //make request to /tweets and receive array of tweets as JSON
+    $.get("http://localhost:8080/tweets/").done(function (data) {
+      renderTweets(data);
+    });
+  };
+  loadTweets();
 });
