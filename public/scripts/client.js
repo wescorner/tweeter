@@ -5,31 +5,6 @@
  */
 
 $(function () {
-  const data = [
-    {
-      user: {
-        name: "Newton",
-        avatars: "https://i.imgur.com/73hZDYK.png",
-        handle: "@SirIsaac",
-      },
-      content: {
-        text: "If I have seen further it is by standing on the shoulders of giants",
-      },
-      created_at: 1461116232227,
-    },
-    {
-      user: {
-        name: "Descartes",
-        avatars: "https://i.imgur.com/nlhLi3I.png",
-        handle: "@rd",
-      },
-      content: {
-        text: "Je pense , donc je suis",
-      },
-      created_at: 1461113959088,
-    },
-  ];
-
   const createTweetElement = function (tweetData) {
     //return <article> html element that contains the entire HTML structure of tweet
     const tweet = $(`
@@ -66,6 +41,10 @@ $(function () {
   $(".tweet-form").submit(function (event) {
     event.preventDefault();
     const $serializedData = $(this).serialize();
+    const $inputLength = $("#tweet-text").val().length;
+    if ($inputLength < 1 || $inputLength > 140) {
+      return alert("Tweets must be between 1-140 characters!");
+    }
     $.post("http://localhost:8080/tweets/", $serializedData, function (data) {
       console.log($serializedData);
     });

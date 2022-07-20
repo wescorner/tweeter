@@ -8,6 +8,7 @@
   border-color: gray;
   width: 100%;
   text-align: start;
+  overflow-wrap: break-word;
   padding: 18px;
 }
 
