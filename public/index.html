@@ -55,38 +55,38 @@
         <i class="fa-solid fa-angles-down"></i>
       </button>
     </nav>
-
-    <!-- header -->
-    <header class="header">
-      <div>
-        <img src="/images/profile-hex.png" />
-      </div>
-      <br />
-      <div>
-        <h2 id="name"><strong>Wesley</strong> Corner</h2>
-      </div>
-    </header>
-
-    <!-- Page-specific (main) content here -->
-    <main class="container" id="main-container">
-      <section class="new-tweet">
-        <div id="error" style="display: none">
-          <i class="fa-solid fa-triangle-exclamation"></i>
-          <p>Tweets must be between 1-140 characters!</p>
-          <i class="fa-solid fa-triangle-exclamation"></i>
+    <div class="content">
+      <!-- header -->
+      <header class="header">
+        <div>
+          <img src="/images/profile-hex.png" />
         </div>
-        <h2>Compose Tweet</h2>
-        <form action="/tweets/" method="POST" class="tweet-form">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div class="submit-tweet">
-            <button id="tweet-button" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+        <br />
+        <div>
+          <h2 id="name"><strong>Wesley</strong> Corner</h2>
+        </div>
+      </header>
+
+      <!-- Page-specific (main) content here -->
+      <main class="container" id="main-container">
+        <section class="new-tweet">
+          <div id="error" style="display: none">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <p>Tweets must be between 1-140 characters!</p>
+            <i class="fa-solid fa-triangle-exclamation"></i>
           </div>
-        </form>
-      </section>
-      <section class="container" id="tweets-container"></section>
-    </main>
+          <form action="/tweets/" method="POST" class="tweet-form">
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div class="submit-tweet">
+              <button id="tweet-button" type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+        <section class="container" id="tweets-container"></section>
+      </main>
+    </div>
     <button id="scroll-to-top">
       <i class="fa-solid fa-angles-up"></i>
     </button>

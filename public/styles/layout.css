@@ -29,5 +29,30 @@ main {
 }
 
 /*
- * Additional CSS can be defined below or in other CSS files, as per instructions
+ * Desktop Layout
  */
+
+@media screen and (min-width:1024px){
+  body nav {
+    background-color: #4056A1;
+  }
+
+  .content {
+    display: flex;
+    margin-left: 4%;
+    margin-right: 4%;
+    /* padding: 10%; */
+    align-content: start;
+  }
+
+  .content .header{
+    height: 400px;
+    width: 600px;
+    margin-right: 10%;
+    margin-top: 15%;
+  }
+
+  .content #main-container {
+    margin-top: 15%;
+  }
+}

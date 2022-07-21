@@ -93,6 +93,7 @@ $(function () {
 
   $("#scroll-to-top").click(function () {
     //scroll to top and focus text area on button click
+    $(".new-tweet").slideDown();
     $(window).scrollTop(0);
     $("#tweet-text").focus();
   });
