@@ -48,7 +48,6 @@
 }
 
 #error {
-  display: none !important;
   color: red;
   display: flex;
   justify-content: space-evenly;
