@@ -1,3 +1,6 @@
+/*TODO: convert css to scss*/
+/*TODO: animate button hover and click effects*/
+
 nav {
   display: flex;
   height: 120px;
@@ -10,12 +13,10 @@ nav {
   z-index: 1;
   top:0;
   width: 100%;
-
 }
 
 nav span { 
   font-family: "Bungee", cursive;
-
 }
 
 #logo {
@@ -25,6 +26,7 @@ nav span {
 #new-tweet-button {
   background: none;
   border: none;
+  transition-duration: 0.2s;
   color: white;
   display: flex;
   flex-direction: column;
@@ -32,23 +34,16 @@ nav span {
   font-size: 24px;
 }
 
+#new-tweet-button i{
+  animation: bounce 1.5s infinite;
+}
+
 #new-tweet-button:hover {
   transform: scale(1.1)
 }
 
-#new-tweet-button:hover i{
-  animation: bounce 1.5s infinite;
-
-}
-
-@keyframes bounce {
-  0%,
-  100% {
-    transform: translateY(0)
-  }
-  50% {
-    transform: translateY(6px);
-  }
+#new-tweet-button:active {
+  transform: scale(0.9);
 }
 
 #new-tweet-text {
@@ -65,7 +60,31 @@ nav span {
   color: white;
   border: none;
   border-radius: 50%;
-  /* font-size: 80px; */
-  height: 8%;
-  width: 8%;
+  height: 64px;
+  width: 64px;
+}
+
+#scroll-to-top i{
+  animation: bounce 1.5s infinite;
+}
+
+#scroll-to-top:hover{
+  transform: scale(1.1);
+  transition-duration: 0.2s;
+  background-color: rgb(18, 96, 214);
+}
+
+
+#scroll-to-top:active {
+  transform: scale(0.9);
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(-4)
+  }
+  50% {
+    transform: translateY(4px);
+  }
 }

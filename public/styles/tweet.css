@@ -1,3 +1,4 @@
+/* TODO: animate tweet button effects */
 .tweet {
   margin-top: 48px;
   margin-bottom: 48px;
@@ -55,8 +56,6 @@
 .tweet footer .icons {
   color: #4056A1;
 }
-
-
 
 .tweet footer .icons > * {
   padding: 8px;
