@@ -41,7 +41,6 @@ nav span {
 
 }
 
-
 @keyframes bounce {
   0%,
   100% {
@@ -54,4 +53,19 @@ nav span {
 
 #new-tweet-text {
   font-family: "Source Sans Pro", sans-serif;
+}
+
+#scroll-to-top {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  bottom: 4%;
+  right: 4%;
+  background-color: #4056A1;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  /* font-size: 80px; */
+  height: 8%;
+  width: 8%;
 }

@@ -15,7 +15,7 @@ $(function () {
         <p>${timeago.format(tweetData.created_at)}</p>
         <div class="icons">
           <i class="fa-solid fa-flag"></i>
-          <i class="fa-solid fa-arrows-rotate"></i>              
+          <i class="fa-solid fa-retweet"></i>              
           <i class="fa-solid fa-heart"></i>
         </div>
       </footer>
@@ -78,6 +78,23 @@ $(function () {
       key.preventDefault();
       $(".tweet-form").submit();
     }
+  });
+
+  $(window).scroll(function () {
+    //only display scroll-to-top button when user is not at top of page
+    if ($(window).scrollTop() > 1) {
+      $("#scroll-to-top").fadeIn("fast");
+      $("#new-tweet-button").fadeOut("fast");
+    } else {
+      $("#scroll-to-top").fadeOut("fast");
+      $("#new-tweet-button").fadeIn("fast");
+    }
+  });
+
+  $("#scroll-to-top").click(function () {
+    //scroll to top and focus text area on button click
+    $(window).scrollTop(0);
+    $("#tweet-text").focus();
   });
 
   loadTweets();
