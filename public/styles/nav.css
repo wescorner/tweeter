@@ -17,6 +17,15 @@ nav {
 nav span {
   font-family: "Bungee", cursive;
 }
+nav #logo {
+  text-shadow: -1px -1px 0 #4056A1, 1px -1px 0 #4056A1, -1px 1px 0 #4056A1, 1px 1px 0 #4056A1;
+  /* making black twitter svg into blue logo */
+}
+nav #logo #bird {
+  height: 0.8em;
+  width: 0.8em;
+  filter: brightness(0.9) invert(0.7) sepia(0.7) hue-rotate(180deg) saturate(300%);
+}
 
 #logo {
   font-size: 32px;
@@ -27,7 +36,7 @@ nav span {
   background: none;
   border: none;
   transition-duration: 0.2s;
-  color: white;
+  color: #FFFFFF;
   display: flex;
   flex-direction: column;
   align-items: center;

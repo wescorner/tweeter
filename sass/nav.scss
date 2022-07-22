@@ -1,7 +1,7 @@
 /*TODO: convert css to scss*/
 /*TODO: animate button hover and click effects*/
 $white: #FFFFFF;
-$nav: #4056A1;
+$blue: #4056A1;
 
 /* Styling nav bar */
 nav {
@@ -19,7 +19,21 @@ nav {
 
   span {
     font-family: "Bungee", cursive;
+  }
 
+  #logo {
+    text-shadow: 
+    -1px -1px 0 $blue,
+    1px -1px 0 $blue,
+    -1px 1px 0 $blue,
+    1px 1px 0 $blue;
+
+    /* making black twitter svg into blue logo */
+    #bird {
+      height: 0.8em;
+      width: 0.8em;
+      filter: brightness(0.9) invert(0.7) sepia(0.7) hue-rotate(180deg) saturate(300%);
+    }
   }
 }
 
@@ -32,7 +46,7 @@ nav {
   background: none;
   border: none;
   transition-duration: 0.2s;
-  color: white;
+  color: $white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,7 +79,7 @@ nav {
   z-index: 2;
   bottom: 4%;
   right: 4%;
-  background-color: $nav;
+  background-color: $blue;
   color: $white;
   border: none;
   border-radius: 50%;
