@@ -60,3 +60,6 @@
 .tweet footer .icons > *:hover {
   color: goldenrod;
 }
+.tweet footer .icons > *:active {
+  transform: scale(0.96);
+}

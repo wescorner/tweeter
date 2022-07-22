@@ -94,11 +94,18 @@ nav {
   &:hover {
     transform: scale(1.1);
     transition-duration: 0.2s;
+    animation: pulse 0.5s;
+    box-shadow: 0 0 0 1em transparent;
   }
 
   &:active {
     transform: scale(0.9);
   }
+}
+
+/* pulse animation */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 $blue; }
 }
 
 /* bounce animation */

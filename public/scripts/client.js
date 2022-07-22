@@ -25,6 +25,7 @@ $(function () {
   };
 
   const escape = function (str) {
+    //sanitize user tweet input to stop injection
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;

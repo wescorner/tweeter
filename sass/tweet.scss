@@ -4,6 +4,7 @@
 */
 $light-blue: #9fb1ec;
 $blue: #4056A1;
+$gold: goldenrod;
 .tweet {
   margin-top: 48px;
   margin-bottom: 48px;
@@ -67,7 +68,11 @@ $blue: #4056A1;
         padding: 8px;
 
         &:hover {
-          color: goldenrod;
+          color: $gold;
+        }
+
+        &:active {
+          transform: scale(0.96);
         }
       }
     }
