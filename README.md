@@ -1,8 +1,6 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
-
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+Tweeter is a simple yet responsive single-page Twitter clone, and is built with JS, Jquery, Ajax, HTML, CSS, SCSS. When using Tweeter, the user can select the "Write Tweet" button to drop down a tweet submit form, that lets a user enter a tweet between 1-140 characters. (This input is sanitized, so don't bother trying any XSS injection!) If the user tries to submit a tweet not within 1-140 characters, an error drops down notifying the user, which can be sent away by correcting the number of characters that are inputted. Tweeter's reponsive design gives two different layouts: one for mobile/tablet, and one for desktop. When the user's screen width is above 1024px, the desktop view is rendered. When the user's screen width is between 512-1024px, the tablet view is rendered. And when the user's screen width is below 512px, the mobile view is rendered, which is just the tablet view with smaller tweet text and a smaller nav-bar.
 
 ## Getting Started
 
@@ -14,5 +12,13 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Dependencies
 
-- Express
 - Node 5.10.x or above
+- Express
+- Chance
+- MD5
+
+## Tweeter in action
+
+- [desktop-view](https://github.com/wescorner/tweeter/blob/master/docs/desktop-view.gif?raw=true)
+
+- [resizing](https://github.com/wescorner/tweeter/blob/master/docs/resize.gif?raw=true)
