@@ -8,12 +8,13 @@
 
 .tweet-form {
   margin-top: 32px;
-  display: flex;
+  display:flex;
   flex-direction: column;
   font-weight: 600;
-}
-.tweet-form label {
-  align-self: start;
+  
+  label {
+    align-self: start;
+  }
 }
 
 .submit-tweet {
@@ -41,14 +42,16 @@
   font-size: 18px;
   padding: 4px 8px 4px 8px;
   border: none;
-}
-#tweet-button:hover {
-  transform: scale(1.02);
-  box-shadow: 0 5px 10px #05A2FF;
-}
-#tweet-button:active {
-  transform: scale(0.98);
-  box-shadow: none;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 10px #05A2FF;
+  }
+
+  &:active {
+    transform: scale(0.98);
+    box-shadow: none;
+  }
 }
 
 /* styling for error message above new tweet */

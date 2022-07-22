@@ -1,4 +1,7 @@
 /* TODO: animate tweet button effects */
+/*
+*Styling for each tweet
+*/
 .tweet {
   margin-top: 48px;
   margin-bottom: 48px;
@@ -11,35 +14,32 @@
   text-align: start;
   overflow-wrap: break-word;
   padding: 18px;
+  /* styling for icon/name/tag above tweet */
+  /* styling for timeago and buttons below tweet */
 }
-
 .tweet:hover {
   box-shadow: 4px 4px #9fb1ec;
+  transform: scale(1.01);
 }
-
 .tweet header {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-
 .tweet header .tag {
   padding-top: 18px;
   padding-right: 12px;
   color: #9fb1ec;
 }
-
 .tweet header .name {
   display: flex;
   align-items: center;
 }
-
 .tweet header .name > * {
   padding: 8px;
 }
-
 .tweet footer {
-  display: flex;  
+  display: flex;
   justify-content: space-between;
   align-items: center;
   border-top-style: solid;
@@ -47,20 +47,16 @@
   border-color: gray;
   font-size: 16px;
 }
-
 .tweet footer > * {
   padding-left: 12px;
   padding-right: 12px;
 }
-
 .tweet footer .icons {
   color: #4056A1;
 }
-
 .tweet footer .icons > * {
   padding: 8px;
 }
-
 .tweet footer .icons > *:hover {
   color: goldenrod;
 }
