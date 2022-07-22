@@ -1,6 +1,6 @@
-/*TODO: convert css to scss*/
-/*TODO: animate button hover and click effects*/
-/* Styling nav bar */
+/* 
+*Styling for nav bar and scroll button
+*/
 nav {
   display: flex;
   height: 120px;
