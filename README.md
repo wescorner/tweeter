@@ -19,6 +19,6 @@ Tweeter is a simple yet responsive single-page Twitter clone, and is built with 
 
 ## Tweeter in action
 
-- [desktop-view](https://github.com/wescorner/tweeter/blob/master/docs/desktop-view.gif?raw=true)
+![desktop-view](https://github.com/wescorner/tweeter/blob/master/docs/desktop-view.gif)
 
-- [resizing](https://github.com/wescorner/tweeter/blob/master/docs/resize.gif?raw=true)
+![resizing](https://github.com/wescorner/tweeter/blob/master/docs/resize.gif)
